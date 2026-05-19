@@ -1,0 +1,127 @@
+/* Theme Variables */
+:root {
+  /* Dark Theme (Default) */
+  --primary: #e63946; /* Victory red accent */
+  --bg-color: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-color: #f5f5f5;
+  --text-secondary: #b0b0b0;
+  --card-bg: #1e1e1e;
+  --nav-bg: #0a0a0a;
+  --border-color: #333;
+}
+
+[data-theme="light"] {
+  /* Light Theme */
+  --primary: #dc2626;
+  --bg-color: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --text-color: #212529;
+  --text-secondary: #6c757d;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --border-color: #dee2e6;
+}
+
+/* Apply Theme */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h2 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.nav-links a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+  border: 1px solid var(--border-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Form Inputs */
+input, textarea {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Page Container */
+.page-container {
+  padding: 2rem;
+  min-height: 70vh;
+}
